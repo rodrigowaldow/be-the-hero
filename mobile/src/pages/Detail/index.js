@@ -1,7 +1,7 @@
 import React from 'react';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { Text, View, Image, TouchableOpacity, FlatList } from 'react-native';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 
 import logoImg from '../../assets/logo.png';
 import styles from './styles';
@@ -9,8 +9,8 @@ import styles from './styles';
 export default function Incidents() {
 	const navigation = useNavigation();
 
-	function navigateToDetail(e) {
-		navigation.navigate('Detail');
+	function navigateBack(e) {
+		navigation.goBack();
 	}
 
   return (
@@ -20,7 +20,7 @@ export default function Incidents() {
 					
 					<TouchableOpacity
 						style={styles.detailsButton} 
-						onPress={navigateToDetail}
+						onPress={navigateBack}
 					>
 						<Feather name="arrow-left" size={28} color="#e02041" />
 					</TouchableOpacity>
