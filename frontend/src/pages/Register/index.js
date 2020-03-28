@@ -33,7 +33,7 @@ export default function Register() {
 
 			history.push('/');
 		} catch (error) {
-			alert('Erro no cadastro, tente novament');
+			alert('Erro no cadastro, tente novamente');
 		}
 	}
 
